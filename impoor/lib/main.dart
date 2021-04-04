@@ -10,6 +10,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: "Demo App",
       home: HomePage()
     );
@@ -20,27 +21,18 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      //backgroundColor: Colors.deepOrange,
-      backgroundColor: Color(0xff00FF00),
+      backgroundColor: Colors.white,
+      //backgroundColor: Color(0xff00FF00),
       appBar: AppBar(
-        title: Text("I AM POOR", style: TextStyle(color: Color(0xff00FF00)),),
+        title: Text("I AM POOR", style: TextStyle(color: Colors.white),),
         //centerTitle: true,
       ),
-      body: Center(child: Image.asset("assets/i_am_poor.png", repeat: ImageRepeat.repeat,)),
+      //body: Center(child: Image.asset("assets/impoor.png")),
+      body: Center(
+        child: Image.network("https://png.pngtree.com/png-clipart/20210224/ourmid/pngtree-illustration-poor-people-png-image_2914939.jpg"),
+      )
     );
   }
 }
 
-// class HomePage extends StatefulWidget {
-//   @override
-//   _HomePageState createState() => _HomePageState();
-// }
 
-// class _HomePageState extends State<HomePage> {
-//   @override
-//   Widget build(BuildContext context) {
-//     return Container(
-      
-//     );
-//   }
-// }
